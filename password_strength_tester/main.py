@@ -51,12 +51,7 @@ def check_strength():
     }
     strength = strength_levels.get(score, "Unknown")
 
-    with open('/home/duffer/Gemini/password-strength-tester/results/results.txt', 'a') as f:
-        f.write(f"Password: {password}\n")
-        f.write(f"Score: {score}\n")
-        f.write(f"Strength: {strength}\n")
-        f.write(f"Feedback: {feedback}\n")
-        f.write("-" * 20 + "\n")
+
 
     return jsonify({
         'score': score,

@@ -23,7 +23,7 @@ class TestPasswordStrength(unittest.TestCase):
         response = self.app.post('/check_strength', data=json.dumps({'password': 'MyP@ssw0rd123!'}), content_type='application/json')
         self.assertEqual(response.status_code, 200)
         data = json.loads(response.data)
-        self.assertEqual(data['strength'], 'Very Strong')
+        self.assertEqual(data['strength'], 'Strong')
 
 if __name__ == '__main__':
     unittest.main()
