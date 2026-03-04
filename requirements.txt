@@ -1,2 +1,4 @@
 Flask
 zxcvbn
+flask-limiter
+requests
